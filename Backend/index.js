@@ -15,9 +15,11 @@ const app = express();
 
 app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
+const CLIENT_URL = (process.env.CLIENT_URL || "https://zora-mu.vercel.app").replace(/\/+$/, "");
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "https://zora-mu.vercel.app",
+    origin: CLIENT_URL,
     credentials: true,
   })
 );
