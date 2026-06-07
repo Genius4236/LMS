@@ -2,29 +2,6 @@
 
 Node.js + Express + MongoDB REST API for the Zora frontend.
 
-## Setup
-
-1. Copy `.env.example` to `.env` and set your values:
-
-```bash
-cp .env.example .env
-```
-
-2. Install dependencies and start MongoDB locally (or use Atlas).
-
-```bash
-npm install
-npm run dev
-```
-
-API runs at `http://localhost:8000`.
-
-## Optional demo data
-
-```bash
-npm run seed
-```
-
 | Account | Email | Password |
 |---------|-------|----------|
 | Educator | educator@demo.com | demo123 |
