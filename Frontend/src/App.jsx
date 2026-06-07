@@ -14,7 +14,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const serverUrl = import.meta.env.SERVER_URL || "http://localhost:8000" || "https://lmsbackend-flame.vercel.app";
+export const serverUrl = import.meta.env.SERVER_URL || "https://lmsbackend-flame.vercel.app";
 
 function App() {
   return (
