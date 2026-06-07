@@ -30,7 +30,7 @@ function Home() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                AegisLMS provides a gorgeous learning experience. Browse expert-led video lectures, track your milestones, and build real projects.
+                Zora provides a gorgeous learning experience. Browse expert-led video lectures, track your milestones, and build real projects.
               </p>
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
                 <Link
@@ -151,7 +151,7 @@ function Home() {
                 Are you an educator? Share your knowledge.
               </h2>
               <p className="text-indigo-200 text-lg max-w-xl">
-                AegisLMS allows instructors to build rich classes with high-fidelity video playlists, assignments, and detailed learning panels.
+                Zora allows instructors to build rich classes with high-fidelity video playlists, assignments, and detailed learning panels.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link

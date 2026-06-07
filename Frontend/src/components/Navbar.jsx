@@ -28,7 +28,7 @@ function Navbar() {
                 <FaGraduationCap className="text-xl" />
               </div>
               <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-indigo-600 to-indigo-800 bg-clip-text text-transparent">
-                AegisLMS
+                Zora
               </span>
             </Link>
           </div>

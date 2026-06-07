@@ -249,7 +249,7 @@ function Dashboard() {
               <FaBookOpen className="text-5xl text-gray-300 mx-auto" />
               <h3 className="text-lg font-bold text-gray-800">No Courses Built</h3>
               <p className="text-gray-500 max-w-sm mx-auto text-sm">
-                Get started as a content creator on AegisLMS! Build modules and configure learning playlist items.
+                Get started as a content creator on Zora! Build modules and configure learning playlist items.
               </p>
               <Link
                 to="/creator"

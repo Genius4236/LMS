@@ -101,7 +101,7 @@ function SignUp() {
 
           {/* right div */}
           <div className=" w-[50%] h-[100%] rounded-r-2xl bg-[black] md:flex items-center justify-center flex-col hidden">
-            <img src="/logo.jpg" alt="logo" className="w-30 show-2xl" />
+            <img src="/logo.png" alt="logo" className="w-30 show-2xl" />
             <span className="text-2xl text-white">Virtual Course</span>
 
           </div>

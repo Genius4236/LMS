@@ -2,6 +2,7 @@ import Course from "../models/courseModel.js";
 import Lecture from "../models/lectureModel.js";
 import User from "../models/userModel.js";
 import Progress from "../models/progressModel.js";
+import { arrayIncludesId } from "../utils/objectId.js";
 
 // Create Course (Educator)
 export const createCourse = async (req, res) => {
@@ -250,8 +251,7 @@ export const enrollInCourse = async (req, res) => {
       return res.status(404).json({ message: "Course not found" });
     }
 
-    // Check if already enrolled
-    if (course.enrolledStudents.includes(studentId)) {
+    if (arrayIncludesId(course.enrolledStudents, studentId)) {
       return res.status(400).json({ message: "Already enrolled in this course" });
     }
 
@@ -264,12 +264,14 @@ export const enrollInCourse = async (req, res) => {
     student.enrolledCourses.push(courseId);
     await student.save();
 
-    // Initialize progress tracker
-    const progress = await Progress.create({
-      student: studentId,
-      course: courseId,
-      completedLectures: [],
-    });
+    let progress = await Progress.findOne({ student: studentId, course: courseId });
+    if (!progress) {
+      progress = await Progress.create({
+        student: studentId,
+        course: courseId,
+        completedLectures: [],
+      });
+    }
 
     return res.status(200).json({
       message: "Enrolled in course successfully",
@@ -278,6 +280,23 @@ export const enrollInCourse = async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({ message: "Enrollment failed", error: error.message });
+  }
+};
+
+// Get courses the logged-in student is enrolled in
+export const getStudentEnrolledCourses = async (req, res) => {
+  try {
+    const student = await User.findById(req.user._id).populate({
+      path: "enrolledCourses",
+      populate: [
+        { path: "educator", select: "name photoUrl description" },
+        { path: "lectures", select: "title duration" },
+      ],
+    });
+
+    return res.status(200).json({ courses: student?.enrolledCourses || [] });
+  } catch (error) {
+    return res.status(500).json({ message: "Failed to load enrolled courses", error: error.message });
   }
 };
 

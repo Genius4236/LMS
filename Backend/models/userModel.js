@@ -29,11 +29,7 @@ enrolledCourses: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "Course",
     }],
-createdAt: {
-    type: Date,
-    default: Date.now,
-    },
-},{timestamps: true});
+}, { timestamps: true });
 
 
 const User = mongoose.model("User", userSchema);

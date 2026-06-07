@@ -14,7 +14,7 @@ function Footer() {
                 <FaGraduationCap className="text-xl text-white" />
               </div>
               <span className="bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text text-transparent">
-                AegisLMS
+                Zora
               </span>
             </Link>
             <p className="text-sm text-gray-400 max-w-sm">
@@ -83,7 +83,7 @@ function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} AegisLMS. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Zora. All rights reserved.</p>
         </div>
       </div>
     </footer>
