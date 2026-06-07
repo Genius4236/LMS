@@ -10,14 +10,15 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 
-const port = process.env.port || 8000;
+const port = process.env.PORT || 8000;
+const CLIENT_URL = (process.env.CLIENT_URL || "http://localhost:5173").replace(/\/+$/, "");
 const app = express();
 
 app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "https://zora-mu.vercel.app",
+    origin: CLIENT_URL,
     credentials: true,
   })
 );
@@ -39,5 +40,6 @@ app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Zora API listening on port ${port}`);
+  console.log(`CORS allowed origin: ${CLIENT_URL}`);
   connectDB();
 });
