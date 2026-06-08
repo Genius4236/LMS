@@ -1,4 +1,5 @@
 import express from "express";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
 import connectDB from "./config/connectdb.js";
 import cookieParser from "cookie-parser";
@@ -14,14 +15,10 @@ const port = process.env.PORT || 8000;
 const CLIENT_URL = (process.env.CLIENT_URL || "http://localhost:5173").replace(/\/+$/, "");
 const app = express();
 
-app.use(express.json({ limit: "10mb" }));
+// app.use(express.json({ limit: "10mb" }));
+app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: CLIENT_URL,
-    credentials: true,
-  })
-);
+app.use(cors({origin: CLIENT_URL, credentials: true,}));
 
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", service: "Zora API" });
