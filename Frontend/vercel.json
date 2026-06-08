@@ -2,10 +2,10 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://lmsbackend-flame.vercel.app/api/:match*"
+      "destination": "https://https://zora-x8qu.onrender.com/api/:match*"
     },
     {
-      "source": "/(.*)",
+      "source": "/*",
       "destination": "/index.html"
     }
   ]
