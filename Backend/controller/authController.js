@@ -9,7 +9,7 @@ const ALLOWED_ROLES = ["student", "educator", "admin"];
 const setAuthCookie = (res, token) => {
   res.cookie("token", token, {
     httpOnly: true,
-    // secure: process.env.NODE_ENV === "production",
+    secure: process.env.NODE_ENV === "production",
     secure: true, // Always set secure to true for SameSite=None
     sameSite: "None",
     maxAge: 7 * 24 * 60 * 60 * 1000,
