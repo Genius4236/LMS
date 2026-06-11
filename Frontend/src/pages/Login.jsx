@@ -30,7 +30,7 @@ function Login() {
     }
     dispatch(authStart());
     try {
-      const result = await axios.post(`${serverUrl}api/auth/login`,
+      const result = await axios.post(`${serverUrl}/api/auth/login`,
         {
           email,
           password
