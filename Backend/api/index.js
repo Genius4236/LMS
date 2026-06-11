@@ -12,7 +12,7 @@ import { notFound, errorHandler } from "../middleware/errorMiddleware.js";
 dotenv.config();
 
 const port = process.env.PORT || 8000;
-const CLIENT_URL = (process.env.CLIENT_URL || "http://localhost:5173").replace(/\/+$/, "");
+const CLIENT_URL = (process.env.CLIENT_URL || "http://localhost:5173");
 const app = express();
 
 // app.use(express.json({ limit: "10mb" }));
