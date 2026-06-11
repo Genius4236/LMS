@@ -5,7 +5,7 @@
       "destination": "https://lms-seven-tau-74.vercel.app/api/:match*"
     },
     {
-      "source": "^/(.*)$",
+      "source": "/((?!api).*)" ,
       "destination": "/index.html"
     }
   ]
