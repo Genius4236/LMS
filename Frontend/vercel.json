@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://lms-seven-tau-74.vercel.app/api/:match*"
+      "destination": "https://lms-xi-murex.vercel.app/api/:match*"
     },
     {
       "source": "/((?!api).*)" ,
