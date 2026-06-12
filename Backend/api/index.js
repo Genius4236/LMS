@@ -42,3 +42,5 @@ app.listen(port, () => {
 });
 
 
+// At the bottom of api/index.js:
+export default app;
