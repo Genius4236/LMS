@@ -10,10 +10,10 @@ import cors from "cors";
 import { notFound, errorHandler } from "../middleware/errorMiddleware.js";
 
 dotenv.config();
-
-const port = process.env.PORT || 8000;
-const CLIENT_URL = (process.env.CLIENT_URL || "https://lms-seven-tau-74.vercel.app" || "http://localhost:5173");
 const app = express();
+const port = process.env.PORT || 8000;
+const CLIENT_URL = (process.env.CLIENT_URL || "https://lms-xi-murex.vercel.app" || "http://localhost:5173");
+
 
 // app.use(express.json({ limit: "10mb" }));
 app.use(express.json());
