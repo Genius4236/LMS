@@ -77,7 +77,7 @@ function Dashboard() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[70vh]">
-        <ClipLoader color="#4F46E5" size={50} />
+        <ClipLoader color="#99e1d9" size={50} />
       </div>
     );
   }
