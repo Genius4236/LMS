@@ -13,6 +13,16 @@ import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+
+// This injects your new credential rules into every subsequent dashboard layout API call
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 
 export const serverUrl = import.meta.env.VITE_SERVER_URL || "";
 
@@ -61,6 +71,7 @@ function App() {
       <Footer />
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
     </div>
+    
   );
 }
 
