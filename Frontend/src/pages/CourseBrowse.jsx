@@ -118,7 +118,7 @@ function CourseBrowse() {
         <section className="flex-grow">
           {loading ? (
             <div className="flex items-center justify-center h-64">
-              <ClipLoader color="#4F46E5" size={40} />
+              <ClipLoader color="#99e1d9" size={40} />
             </div>
           ) : error ? (
             <div className="bg-red-50 text-red-700 p-4 rounded-xl border border-red-100 text-center">
