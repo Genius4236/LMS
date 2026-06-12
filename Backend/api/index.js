@@ -18,7 +18,7 @@ const CLIENT_URL = (process.env.CLIENT_URL || "https://lms-xi-murex.vercel.app" 
 // app.use(express.json({ limit: "10mb" }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: "https://lms-xi-murex.vercel.app", credentials: true,}));
+app.use(cors({origin: "https://lms-zora.vercel.app", credentials: true,}));
 
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", service: "Zora API" });
