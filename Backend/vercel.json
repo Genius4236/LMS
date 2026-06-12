@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "^/api/(.*)$",
-      "dest": "/index.js",
+      "source": "/api/:path*",
+      "destination": "/api/index.js",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Origin": "https://lms-zora.vercel.app",
