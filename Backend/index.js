@@ -1,13 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import connectDB from "../config/connectdb.js";
+import connectDB from "./config/connectdb.js";
 import cookieParser from "cookie-parser";
-import authRouter from "../route/authRoute.js";
-import courseRouter from "../route/courseRoute.js";
-import progressRouter from "../route/progressRoute.js";
+import authRouter from "./route/authRoute.js";
+import courseRouter from "./route/courseRoute.js";
+import progressRouter from "./route/progressRoute.js";
 import cors from "cors";
-import { notFound, errorHandler } from "../middleware/errorMiddleware.js";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 
