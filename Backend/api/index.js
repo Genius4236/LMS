@@ -12,7 +12,7 @@ import { notFound, errorHandler } from "../middleware/errorMiddleware.js";
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
-const CLIENT_URL = "https://lms-zora.vercel.app"; // Synced to match your CORS allowance
+const CLIENT_URL = "https://lms-zora.vercel.app" || "http://localhost:5173/login"; // Synced to match your CORS allowance
 
 app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(express.json());
